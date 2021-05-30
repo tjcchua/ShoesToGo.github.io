@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(251,224,141);
+}
+
+.title {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.png);
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    text-shadow: 5px 5px white;
+    font-size: 30vh;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.description {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5vmin;
+    font-family: 'Work Sans', sans-serif;
+    margin: 5vmin;
+
+}
+
+.descriptionText {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+hr {
+    border-top: 2px solid black;
+    border-radius: 5px;
+    width: 80vw;
+}
+
+.members {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.member {
+    width: 22vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+img {
+    width:80%;
+    margin: 20px;
+}
+
+a {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 10px;
+    width: 20vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    font-family: 'Work Sans', sans-serif;
+    margin: 5vmin;
+    background-color: rgb(251,224,141);
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: black;
+    color: rgb(251,224,141);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .title {
+    font-size: 20vmin;
+  }
+    hr {
+        border-top: 6px solid black;
+        border-radius: 5px;
+    }
+    .members {
+        margin: 50px;
+        width: 80vw;
+        height: auto;
+        flex-direction: column;
+        font-size: 4vmin;
+        
+    }
+    .member {
+        width:100%;
+        padding: 10vmin;
+    }
+    
+    button {
+        width: 50vw;
+    }
+}
+

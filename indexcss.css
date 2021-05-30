@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(251,224,141);
+}
+
+.PRICES{
+    font-weight: bold;
+			}
+
+.products{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;	
+			}
+			
+.product{
+    height:550px;	
+}
+
+a {
+    color: #8a794a;
+    text-decoration: none;
+}
+
+.header {
+    height: 400px;
+    width: 100vw;
+    background-image: url(background.png);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.png);
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    text-shadow: 5px 5px white;
+    font-size: 40vh;
+    text-align: center;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+nav {
+    background-color: rgb(251,224,141);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3vmin;
+}
+
+h3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+label {
+    font-family: 'Work Sans', sans-serif;
+}
+
+input{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.card {
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgb(251,224,141);
+    border-color: rgb(251,224,141);
+}
+
+#total {
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgb(251,224,141);
+}
+
+input[type=text] {
+                box-sizing: border-box;
+                border: none;
+                border-bottom: 0.5px solid black;
+                background-color: #f7e7bd;
+                text-align: center;
+            }
+
+button {
+    border-style: none;
+    border-color: #f7e7bd;
+    border-width: 1px;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f7e7bd;
+}
+
+button:hover {
+    background-color: black;
+    color: rgb(251,224,141);
+}
+
+.submitButton {
+    border-style: none;
+    border-color: #f7e7bd;
+    width: 10vw;
+    border-width: 1px;
+    border-radius: px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f7e7bd;
+}
+
+.submitButton:hover {
+    background-color: black;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    font-size: 20vmin;
+  }
+    
+.products{
+    width: 200px;
+    height: 200px;
+    }
+    
+}
+    
