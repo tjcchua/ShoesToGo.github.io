@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shoes To Go</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="indexcss.css">
+        <link rel="icon" href="icon.png" type="image/png" >
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        
+        
+		
+		<script>
+			var ShoppingCart = [];
+			var names = [];
+			var emails = [];
+			var addresses = [];
+			var a = 0;
+			var cust_order = JSON.stringify(ShoppingCart);
+		
+			function myNewArrivals(){
+				document.getElementById("NewArrivals_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+			function myAdidas(){
+				document.getElementById("Adidas_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+			function myPuma(){
+				document.getElementById("Puma_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+			function myNewBalance(){
+				document.getElementById("NewBalance_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+			function myConverse(){
+				document.getElementById("Converse_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				}
+			function myNike(){
+				document.getElementById("Nike_menu").className = "visible";
+				document.getElementById("Categories_menu").className = "d-none";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+			function myEscape(){
+				document.getElementById("Categories_menu").className = "visible";
+				document.getElementById("NewArrivals_menu").className = "d-none";
+				document.getElementById("Adidas_menu").className = "d-none";
+				document.getElementById("Puma_menu").className = "d-none";
+				document.getElementById("NewBalance_menu").className = "d-none";
+				document.getElementById("Nike_menu").className = "d-none";
+				document.getElementById("Converse_menu").className = "d-none";
+				}
+				
+			function addtocart1(){
+				var userorder = {
+					prod_name: "NIKE Air Jordan XXXV SH", prod_price: 8795 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			
+			function addtocart2(){
+				var userorder = {
+					prod_name: "NIKE WMNS AIR ZOOM VOMERO 15", prod_price: 4990 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+				
+			function addtocart3(){
+				var userorder = {
+					prod_name: "ADIDAS NMD_R1 W", prod_price: 7550 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			
+			function addtocart4(){
+				var userorder = {
+					prod_name: "ADIDAS Continental 80", prod_price: 5300 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart5(){
+				var userorder = {
+					prod_name: "PUMA Cali WN'S", prod_price: 5190 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart6(){
+				var userorder = {
+					prod_name: "PUMA SUEDE CLASSIC", prod_price: 3000 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart7(){
+				var userorder = {
+					prod_name: "ADIDAS Stan Smith", prod_price: 4800 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart8(){
+				var userorder = {
+					prod_name: "ADIDAS Samba Rose W", prod_price: 5990 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart9(){
+				var userorder = {
+					prod_name: "ADILETTE Aqua Slides", prod_price: 900 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart10(){
+				var userorder = {
+					prod_name: "ADIDAS Superstar Shoes", prod_price: 4999 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart11(){
+				var userorder = {
+					prod_name: "ADIDAS Superstar The Simpsons Squishee", prod_price: 5200 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart12(){
+				var userorder = {
+					prod_name: "ADIDAS Ultra Boost DNA 1.0", prod_price: 4550 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart13(){
+				var userorder = {
+					prod_name: "CONVERSE Chuck 70 High Top", prod_price: 3390 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart14(){
+				var userorder = {
+					prod_name: "CONVERSE Chuck Taylor All Star Renew", prod_price: 3990 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart15(){
+				var userorder = {
+					prod_name: "CONVERSE Jack Purcell Canvas Low Top", prod_price: 3250 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart16(){
+				var userorder = {
+					prod_name: "CONVERSE Run Star Hike", prod_price: 5560 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart17(){
+				var userorder = {
+					prod_name: "CONVERSE One Star Vintage Suede", prod_price: 3750 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			
+			function addtocart18(){
+				var userorder = {
+					prod_name: " CONVERSE Chuck Taylor All Star Unicorns Hook and Loop", prod_price: 3200 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+				
+			function addtocart19(){
+				var userorder = {
+					prod_name: "New Balance 237", prod_price: 3999 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			
+			function addtocart20(){
+				var userorder = {
+					prod_name: "New Balance 247 V3", prod_price: 3375.25 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart21(){
+				var userorder = {
+					prod_name: "New Balance 574 Classic", prod_price: 4100 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart22(){
+				var userorder = {
+					prod_name: "New Balance Kids 996 Classic", prod_price: 2020.25 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart23(){
+				var userorder = {
+					prod_name: "New Balance CT20", prod_price: 2500 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart24(){
+				var userorder = {
+					prod_name: "New Balance 850", prod_price: 5000 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart25(){
+				var userorder = {
+					prod_name: "PUMA BMW MMS X-Ray", prod_price: 4500 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart26(){
+				var userorder = {
+					prod_name: "PUMA Clyde Harwood", prod_price: 5999 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart27(){
+				var userorder = {
+					prod_name: "PUMA Rider Game On JR", prod_price: 5899 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart28(){
+				var userorder = {
+					prod_name: "PUMA Suede Classic+", prod_price: 3550 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart29(){
+				var userorder = {
+					prod_name: "PUMA BMW MMS RS-CUBE", prod_price: 2600 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart30(){
+				var userorder = {
+					prod_name: "PUMA NOVA 2 X Hello Kitty PS", prod_price: 3250 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart31(){
+				var userorder = {
+					prod_name: "NIKE REACT INFINITY RUN FK AS", prod_price: 5699 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart32(){
+				var userorder = {
+					prod_name: "NIKE W Air Vapormax 2020 FK	", prod_price: 5499 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart33(){
+				var userorder = {
+					prod_name: "NIKE Air Vapormax 2020 FK", prod_price: 7699 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart34(){
+				var userorder = {
+					prod_name: "NIKE WMNS REACT ESCAPE RN", prod_price: 6795 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart35(){
+				var userorder = {
+					prod_name: "NIKE KYBRID S2 EP", prod_price: 6895 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+			function addtocart36(){
+				var userorder = {
+					prod_name: "NIKE AIR JORDAN 1 ZOOM Air CMFT", prod_price: 7345 };
+					ShoppingCart.push(userorder);
+					display_product();
+					displayTotal();
+				}
+				
+			function display_product() {
+                var x = 0;
+				document.getElementById('cart_items').innerHTML = "";
+                for(var i=0; i<ShoppingCart.length; i++) {
+                    document.getElementById('cart_items').innerHTML += "<li class='list-group-item'><strong>" + ShoppingCart[i].prod_name + "</strong><br>Php " + ShoppingCart[i].prod_price + "<button style='float: right;'onclick='removebutton(this.id)' id='" + x++ + "' class='btn btn-outline-danger'>Remove</button></li>";
+                }
+            }
+
+			function displayTotal() {
+                a = a + ShoppingCart[ShoppingCart.length-1].prod_price;
+                var total = a;
+                document.getElementById('total').innerHTML = "<strong>Total: </strong>" + "Php " + total;
+            }
+			
+			function removebutton(clicked_id) {
+                var z = clicked_id;
+                a = a - ShoppingCart[z].prod_price;
+                var total = a;
+                document.getElementById('total').innerHTML = "Total: " + "Php " + total;
+                ShoppingCart.splice(z,1);
+                display_product();
+            }
+			function submitinfo() {
+               document.getElementById('cust_order').value = JSON.stringify(ShoppingCart);
+				
+                
+                    document.getElementById('checkout').type="submit";
+                    document.getElementById('form').action="http://savantandsparktest.ml/checkout.php";
+
+                    document.getElementById('form').method="POST";
+                    
+            }
+			
+			
+		</script>	
+		
+		
+	</head>
+	
+    <body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light " >
+				<a class="navbar-brand" href="#">
+					<img src="icon.png" width="75" height="75" alt="LOGO" style="margin: 0;">
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#CART">Cart</a>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Categories
+						</a>
+			
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href='javascript:;' onclick="myNewArrivals()">New Arrivals</a>
+							<a class="dropdown-item" href='javascript:;' onclick="myAdidas()">Adidas</a>
+							<a class="dropdown-item" href='javascript:;' onclick="myConverse()">Converse</a>
+							<a class="dropdown-item" href='javascript:;' onclick="myNewBalance()">New Balance</a>
+							<a class="dropdown-item" href='javascript:;' onclick="myPuma()">Puma</a>
+							<a class="dropdown-item" href='javascript:;' onclick="myNike()">Nike</a>
+						</div>
+					</li>
+					
+				</ul>
+				
+				<form class="form-inline my-2 my-lg-0">
+					<a href="aboutDev.html">About the Company</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="header"> 
+			SHOES TO GO
+	</div>
+	
+	<div id="Categories_menu" class="visible">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card">
+						<img src="newreleases.png" class="card-img-top" alt="NEW ARRIVALS" onclick="myNewArrivals()">
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group ">
+					<div class="card">
+						<img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c4f2.png" class="card-img-top" alt="ADIDAS" onclick="myAdidas()">
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card">
+						<img src="http://assets.stickpng.com/images/5a314c97cb9a85480a628f80.png" class="card-img-top" alt="CONVERSE" onclick="myConverse()">
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card">
+						<img src="https://cdn.freebiesupply.com/logos/large/2x/new-balance-2-logo-png-transparent.png" class="card-img-top" alt="NEW BALANCE" onclick="myNewBalance()">
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card">
+						<img src="https://i.pinimg.com/originals/d6/2e/e2/d62ee237e901fb9d16b7714b9bd165bb.png" class="card-img-top" alt="PUMA" onclick="myPuma()">
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card">
+						<img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/230_Nike_logo-512.png" class="card-img-top" alt="NIKE" onclick="myNike()">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="NewArrivals_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+					<img src="https://cdn.afew-store.com/assets/32/321565/1200/air-jordan-xxxv-sh-white-black-hyper-royal-gum-med-brown-cz5657-100-sneaker-packshots-180.jpg" class="card-img-top products" alt="NIKE Air Jordan XXXV SH">
+					<div class="card-body">
+						<h2>NIKE Air Jordan XXXV SH</h2>
+						<p class="PRICES">PHP 8,795.00</p>
+						<button type="button" class="submitButton" onclick="addtocart1()">Add to Cart</button>
+					</div>
+					
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a4c3cf11-7f1a-43af-8373-856ee709ce59/air-zoom-vomero-15-running-shoe-wqDgSG.png" class="card-img-top products" alt="NIKE WMNS AIR ZOOM VOMERO 15">
+						<div class="card-body">
+							<h2>NIKE WMNS AIR ZOOM VOMERO 15</h2>
+							<p class="PRICES">PHP 4,999.00</p>
+							<button type="button" class="submitButton" onclick="addtocart2()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/699692b43ae549cdbe76ab590109a3fe_9366/NMD_R1_Shoes_White_FV8730_01_standard.jpg" class="card-img-top products" alt="ADIDAS NMD_R1 W">
+						<div class="card-body">
+							<h2>ADIDAS NMD_R1 W</h2>
+							<p class="PRICES">PHP 7,550.00</p>
+							<button type="button" class="submitButton" onclick="addtocart3()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.footshop.com/297991-full_product/56329.jpg" class="card-img-top products" alt="ADIDAS Continental 80">
+						<div class="card-body">
+							<h2>ADIDAS Continental 80</h2>
+							<p class="PRICES">PHP 5,300.00</p>
+							<button type="button" class="submitButton" onclick="addtocart4()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://runcolors.pl/product_picture/full_size/cali_wn_s_369155_04_puma_36915504_1.jpg" class="card-img-top products" alt="PUMA Cali WN’S">
+						<div class="card-body">
+							<h2>PUMA Cali WN’S</h2>
+							<p class="PRICES">PHP 5,190.00</p>
+							<button type="button" class="submitButton" onclick="addtocart5()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.footshop.com/450322-full_product/98749.jpg" class="card-img-top products" alt="PUMA SUEDE CLASSIC">
+						<div class="card-body">
+							<h2>PUMA SUEDE CLASSIC</h2>
+							<p class="PRICES">PHP 3,000.00</p>
+							<button type="button" class="submitButton" onclick="addtocart6()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Adidas_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/e01dea68cf93434bae5aac0900af99e8_9366/Stan_Smith_Shoes_White_FX5500_01_standard.jpg" class="card-img-top products" alt="ADIDAS Stan Smith">
+						<div class="card-body">
+							<h2>ADIDAS Stan Smith</h2>
+							<p class="PRICES">PHP 4,800.00</p>
+							<button type="button" class="submitButton" onclick="addtocart7()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/b3a78575da28441abbefac3d00b61934_9366/SAMBAROSE_Shoes_with_Swarovski(r)_Crystals_White_H05131_01_standard.jpg" class="card-img-top products" alt="ADIDAS Samba Rose W">
+						<div class="card-body">
+							<h2>ADIDAS Samba Rose W</h2>
+							<p class="PRICES">PHP 5,990.75</p>
+							<button type="button" class="submitButton" onclick="addtocart8()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1d340d04293841e4a018a991001b2602_9366/Adilette_Aqua_Slides_Blue_F35542_06_standard.jpg" class="card-img-top products" alt="ADILETTE Aqua Slides">
+						<div class="card-body">
+							<h2>ADILETTE Aqua Slides</h2>
+							<p class="PRICES">PHP 900.00</p>
+							<button type="button" class="submitButton" onclick="addtocart9()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7ed0855435194229a525aad6009a0497_9366/Superstar_Shoes_White_EG4958_01_standard.jpg" class="card-img-top products" alt="ADIDAS Superstar Shoes">
+						<div class="card-body">
+							<h2>ADIDAS Superstar Shoes</h2>
+							<p class="PRICES">PHP 4,999.00</p>
+							<button type="button" class="submitButton" onclick="addtocart10()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/1f433c7bd3754fd9b944acad0136bce5_9366/Superstar_The_Simpsons_Squishee_Shoes_Green_H05789_01_standard.jpg" class="card-img-top products" alt="ADIDAS Superstar The Simpsons Squishee">
+						<div class="card-body">
+							<h2>ADIDAS Superstar The Simpsons Squishee</h2>
+							<p class="PRICES">PHP 5,200.00</p>
+							<button type="button" class="submitButton" onclick="addtocart11()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/cdc1b857ece14be9bed8abfd01701c50_9366/Ultraboost_1_DNA_Shoes_White_H68156_01_standard.jpg" class="card-img-top products" alt="ADIDAS Ultra Boost DNA 1.0">
+						<div class="card-body">
+							<h2>ADIDAS Ultra Boost DNA 1.0</h2>
+							<p class="PRICES"> PHP 4,450.00</p>
+							<button type="button" class="submitButton" onclick="addtocart12()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Converse_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw3e2c5e55/images/a_08/162050C_A_08X1.jpg?sw=406" class="card-img-top products" alt="CONVERSE Chuck 70 High Top">
+						<div class="card-body">
+							<h2>CONVERSE Chuck 70 High Top</h2>
+							<p class="PRICES">PHP 3,390.00</p>
+							<button type="button" class="submitButton" onclick="addtocart13()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://i.pinimg.com/originals/41/86/36/418636e1c50017abfa8dd98aead26c34.jpg" class="card-img-top products" alt="CONVERSE Chuck Taylor All Star Renew">
+						<div class="card-body">
+							<h2>CONVERSE Chuck Taylor All Star Renew</h2>
+							<p class="PRICES">PHP 3,999.00</p>
+							<button type="button" class="submitButton" onclick="addtocart14()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwaa63ddb4/images/c_08/164057C_C_08X1.jpg?sw=406" class="card-img-top products" alt="CONVERSE Jack Purcell Canvas Low Top">
+						<div class="card-body">
+							<h2>CONVERSE Jack Purcell Canvas Low Top</h2>
+							<p class="PRICES">PHP 3,250.00</p>
+							<button type="button" class="submitButton" onclick="addtocart15()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dwea34f93a/images/a_107/166800C_A_107X1.jpg?sw=964" class="card-img-top products" alt="CONVERSE Run Star Hike">
+						<div class="card-body">
+							<h2>CONVERSE Run Star Hike</h2>
+							<p class="PRICES">PHP 5,560.00</p>
+							<button type="button" class="submitButton" onclick="addtocart16()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.mynoen.com/image/catalog/converse/One%20Star/158371C/one-star-vintage-suede-shoe-158371C-01.jpg" class="card-img-top products" alt="CONVERSE One Star Vintage Suede">
+						<div class="card-body">
+							<h2>CONVERSE One Star Vintage Suede</h2>
+							<p class="PRICES">PHP 3,750.00</p>
+							<button type="button" class="submitButton" onclick="addtocart17()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://i.pinimg.com/originals/95/cd/87/95cd874ee5980076746a7e6ece3a8232.jpg" class="card-img-top products" alt="CONVERSE Chuck Taylor All Star Unicorns Hook and Loop">
+						<div class="card-body">
+							<h2>CONVERSE Chuck Taylor All Star Unicorns Hook and Loop</h2>
+							<p class="PRICES">PHP 3,200.00</p>
+							<button type="button" class="submitButton" onclick="addtocart18()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="NewBalance_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://nb.scene7.com/is/image/NB/ms237lb1_nb_02_i?$pdpflexf2$&fmt=webp&wid=472&hei=472" class="card-img-top products" alt="New Balance 237">
+						<div class="card-body">
+							<h2>New Balance 237</h2>
+							<p class="PRICES">PHP 3,999.00</p>
+							<button type="button" class="submitButton" onclick="addtocart19()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.capital.com.ph/14233-thickbox_default/247-v3.jpg" class="card-img-top products" alt="New Balance 247 V3">
+						<div class="card-body">
+							<h2>New Balance 247 V3</h2>
+							<p class="PRICES">PHP 3,371.25</p>
+							<button type="button" class="submitButton" onclick="addtocart20()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://nb.scene7.com/is/image/NB/ml574nr2_nb_02_i?$pdpflexf2$&fmt=webp&wid=472&hei=472" class="card-img-top products" alt="New Balance 574 Classic">
+						<div class="card-body">
+							<h2>New Balance 574 Classic</h2>
+							<p class="PRICES">PHP 4,100.00</p>
+							<button type="button" class="submitButton" onclick="addtocart21()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://www.capital.com.ph/14047-thickbox_default/kids-996-classic.jpg" class="card-img-top products" alt="New Balance Kids 996 Classic">
+						<div class="card-body">
+							<h2>New Balance Kids 996 Classic</h2>
+							<p class="PRICES">PHP 2021.25</p>
+							<button type="button" class="submitButton" onclick="addtocart22()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://d2y8josozo4xod.cloudfront.net/catalog/product/cache/ea7798f9d8497f939e04ba1c476957f7/y/v/yvct20wc_2_11.jpg" class="card-img-top products" alt="New Balance CT20">
+						<div class="card-body">
+							<h2>New Balance CT20</h2>
+							<p class="PRICES">PHP 2,500.00</p>
+							<button type="button" class="submitButton" onclick="addtocart23()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://nb.scene7.com/is/image/NB/ms850trg_nb_02_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600" class="card-img-top products" alt="New Balance 850">
+						<div class="card-body">
+							<h2>New Balance 850</h2>
+							<p class="PRICES">PHP 5,000.00</p>
+							<button type="button" class="submitButton" onclick="addtocart24()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Puma_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/306503/01/sv01/fnd/SEA/fmt/png/BMW-M-Motorsport-X-Ray-Trainers" class="card-img-top products" alt="PUMA BMW MMS X-Ray">
+						<div class="card-body">
+							<h2>PUMA BMW MMS X-Ray</h2>
+							<p class="PRICES">PHP 4,500.00</p>
+							<button type="button" class="submitButton" onclick="addtocart25()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/193663/02/sv01/fnd/PNA/fmt/png/Clyde-Hardwood-Basketball-Shoes" class="card-img-top products" alt="PUMA Clyde Harwood">
+						<div class="card-body">
+							<h2>PUMA Clyde Harwood</h2>
+							<p class="PRICES">PHP 5,999.00</p>
+							<button type="button" class="submitButton" onclick="addtocart26()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380138/01/sv01/fnd/PNA/fmt/png/Future-Rider-INTL-Game-Sneakers-JR" class="card-img-top products" alt="PUMA Rider Game On JR">
+						<div class="card-body">
+							<h2>PUMA Rider Game On JR</h2>
+							<p class="PRICES">PHP 5,899.00</p>
+							<button type="button" class="submitButton" onclick="addtocart27()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374915/04/sv01/fnd/PNA/fmt/png/Suede-Classic-XXI-Men's-Sneakers" class="card-img-top products" alt="PUMA Suede Classic+">
+						<div class="card-body">
+							<h2>PUMA Suede Classic+</h2>
+							<p class="PRICES">PHP 3,550.00</p>
+							<button type="button" class="submitButton" onclick="addtocart28()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/306498/02/sv01/fnd/EEA/fmt/png/BMW-M-Motorsport-RS-Cube-Trainers" class="card-img-top products" alt="PUMA BMW MMS RS-CUBE">
+						<div class="card-body">
+							<h2>PUMA BMW MMS RS-CUBE</h2>
+							<p class="PRICES">PHP 2,600.00</p>
+							<button type="button" class="submitButton" onclick="addtocart29()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/372327/01/sv01/fnd/PNA/fmt/png/PUMA-x-HELLO-KITTY-Nova-2-Women%E2%80%99s-Sneakers" class="card-img-top products" alt="PUMA NOVA 2 X Hello Kitty PS">
+						<div class="card-body">
+							<h2>PUMA NOVA 2 X Hello Kitty PS</h2>
+							<p class="PRICES">PHP 3,250.00</p>
+							<button type="button" class="submitButton" onclick="addtocart30()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Nike_menu" class="d-none">
+		<div class="container" style="margin-top: 1.5%;"> <!-- .visible or .d-none -->
+			<button type="button" class="close" aria-label="Close" onclick="myEscape()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			
+			<div class="row row-cols-3 row-cols-md-3">
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9142dd74-dc07-4205-abdf-c859a7c21996/react-infinity-run-flyknit-running-shoe-ZjGHFz.png" class="card-img-top products" alt="NIKE REACT INFINITY RUN FK AS">
+						<div class="card-body">
+							<h2>NIKE REACT INFINITY RUN FK AS</h2>
+							<p class="PRICES"> PHP 5,699.00</p>
+							<button type="button" class="submitButton" onclick="addtocart31()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+	 
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7454a8a1-8364-4a9e-880d-a980413ed5eb/air-vapormax-2020-flyknit-shoe-W8qps9.png" class="card-img-top products" alt="NIKE W Air Vapormax 2020 FK">
+						<div class="card-body">
+							<h2>NIKE W Air Vapormax 2020 FK</h2>
+							<p class="PRICES">PHP 5,499.00</p>
+							<button type="button" class="submitButton" onclick="addtocart32()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9f758d88-1158-44b1-9145-54542fc93e7d/air-vapormax-2020-flyknit-shoe-NC8PKX.png" class="card-img-top products" alt="NIKE Air Vapormax 2020 FK">
+						<div class="card-body">
+							<h2>NIKE Air Vapormax 2020 FK</h2>
+							<p class="PRICES">PHP 7,699</p>
+							<button type="button" class="submitButton" onclick="addtocart33()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+		  
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9675ab31-4745-4ca2-b43c-474efb00951d/react-escape-run-running-shoe-94nDwX.png" class="card-img-top products" alt="NIKE WMNS REACT ESCAPE RN">
+						<div class="card-body">
+							<h2>NIKE WMNS REACT ESCAPE RN</h2>
+							<p class="PRICES">PHP 6,795.00</p>
+							<button type="button" class="submitButton" onclick="addtocart34()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/360c440b-61b5-43e7-a79a-738de9dcddb6/kybrid-s2-ep-basketball-shoe-d6GWxh.png" class="card-img-top products" alt="NIKE KYBRID S2 EP">
+						<div class="card-body">
+							<h2>NIKE KYBRID S2 EP</h2>
+							<p class="PRICES">PHP 6,895.00</p>
+							<button type="button" class="submitButton" onclick="addtocart35()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col mb-4 group">
+					<div class="card product">
+						<img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/120b8e18-122b-4664-828f-49295ada291e/air-jordan-1-zoom-cmft-shoe-mDxHSk.png" class="card-img-top products" alt="NIKE AIR JORDAN 1 ZOOM Air CMFT">
+						<div class="card-body">
+							<h2>NIKE AIR JORDAN 1 ZOOM Air CMFT</h2>
+							<p class="PRICES">PHP 7,345.00</p>
+							<button type="button" class="submitButton" onclick="addtocart36()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin-bottom: 50px;">
+		<div class="row">
+			<div class="col-sm-6">
+				<h3 id="CART">Cart:</h3>
+				
+				<div class="card">
+					<ul class="list-group" id="cart_items">
+						<li class="list-group-item" >No items in cart</li>
+					</ul>
+                    <ul>
+					<li class="list-group-item list-group-item-secondary" id="total"><strong>Total: </strong>Php 0.00</li>
+                    </ul>
+				</div>
+			</div>
+		<div class="col-sm-6">
+			<h3>Delivery Details</h3>
+				<form action="http://savantandsparktest.ml/checkout.php" method="post">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="cust_name">Name: </label>
+							<input type="text" name="cust_name" id="cust_name" class="form-control" required>
+						</div>
+						
+						<div class="form-group col-md-6">
+							<label for="cust_email">Email: </label>
+							<input type="text" name="cust_email" id="cust_email" class="form-control" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="cust_addr">Address: </label>
+						<input type="text" name="cust_addr" id="cust_addr" class="form-control" required>
+					</div>
+					<input type="hidden" id="cust_order" name="cust_order" value="">
+					<button type="button" id="checkout" onclick="submitinfo()" onsubmit="return false">Place Order</button>
+				
+				</form>
+				</div>
+				</div>
+			</div>
+</body>
